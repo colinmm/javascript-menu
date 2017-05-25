@@ -1,8 +1,5 @@
 
-// Declare variables
-var menuObj, topMenu, subMenu, listItem, thread, listText, listThread;
-
-menuObj = {
+var menuObj = {
     "first" : "Events",
     "second" : "Articles",
     "Reporting" : {
@@ -26,7 +23,7 @@ menuObj = {
 function generateMenu(currentObj) {
 
     // Create root element
-    topMenu = document.createElement('ul');
+    var topMenu = document.createElement('ul');
 
     function processMenu(obj, subList) {
         debugger;
@@ -34,10 +31,10 @@ function generateMenu(currentObj) {
         // Loop through menuObj properties
         Object.keys(obj).forEach(function (item) {
 
-            subMenu = document.createElement('ul');
-            listItem = document.createElement('li');
-            listThread = document.createTextNode(item);
-            thread = document.createTextNode(obj[item]);
+            var subMenu = document.createElement('ul');
+            var listItem = document.createElement('li');
+            var listThread = document.createTextNode(item);
+            var thread = document.createTextNode(obj[item]);
 
             // If the item is an object, create a nested ul tag
             // if not, just append the value to the list
