@@ -1,4 +1,4 @@
-
+// Generic menu data
 var menuObj = {
     "first" : "Events",
     "second" : "Articles",
@@ -26,7 +26,6 @@ function generateMenu(currentObj) {
     var topMenu = document.createElement('ul');
 
     function processMenu(obj, subList) {
-        debugger;
 
         // Loop through menuObj properties
         Object.keys(obj).forEach(function (item) {
